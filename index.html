@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>InovaTech Flow</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <img src="image/INOVATECHFLOW.svg" alt="InovaTech Flow" class="logo-img">
+
+  <nav>
+    <a href="#">Início</a>
+    <a href="#about">Sobre</a>
+
+    <!-- DROPDOWN -->
+    <div class="dropdown">
+      <a href="#services" class="dropbtn">Soluções e Serviços ▾</a>
+
+      <div class="dropdown-content">
+
+        <div class="menu-item">
+          Desenvolvimento
+          <div class="submenu">
+            <a href="#services">Sistemas Sob Medida</a>
+            <a href="#services">Aplicações Web</a>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          Automações
+          <div class="submenu">
+            <a href="#services">Integração de APIs</a>
+            <a href="#services">Processos Automatizados</a>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          Infraestrutura
+          <div class="submenu">
+            <a href="#services">Cloud</a>
+            <a href="#services">Hospedagem</a>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          Suporte e Manutenção
+          <div class="submenu">
+            <a href="#services">Correções</a>
+            <a href="#services">Melhorias Contínuas</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <a href="#contact">Contato</a>
+  </nav>
+</header>
+
+<!-- CARROSSEL -->
+<section class="carousel">
+
+  <div class="slide active" style="background-image: url('image/slide-banner1.jpg');">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Inovação na prática</h1>
+      <p>Soluções tecnológicas para impulsionar seu negócio</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('image/slide-banner-2.jpg');">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Alta performance</h1>
+      <p>Segurança e escalabilidade para sua empresa crescer</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('image/slide-banner-3.jpg');">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Transformação digital</h1>
+      <p>Sistemas modernos e eficientes para seu negócio</p>
+    </div>
+  </div>
+
+  <!-- 🌊 CURVA (WAVE) -->
+  <div class="wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,40 C300,120 1100,0 1440,60 L1440,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+</section>
+
+<!-- SOBRE -->
+<section class="section">
+  <h2>Sobre a Empresa</h2>
+  <p>
+    A InovaTech Flow é especializada no desenvolvimento de soluções tecnológicas sob medida. 
+    Trabalhamos lado a lado com nossos clientes para criar sistemas seguros, modernos e preparados para o crescimento sustentável.
+  </p>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="services" class="section dark">
+  <h2>Serviços</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="image/desenvolvimento-de-sistemas.jpg" alt="Desenvolvimento de Sistemas">
+      <h3>Desenvolvimento de Sistemas</h3>
+      <p>
+        Criamos sistemas personalizados que atendem às necessidades específicas do seu negócio, com foco em performance, segurança e usabilidade.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="image/Automacao-service.jpeg" alt="Automações">
+      <h3>Automações</h3>
+      <p>
+        Automatizamos processos para aumentar a produtividade, reduzir erros e tornar sua operação mais eficiente e escalável.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="image//hospedagem-foto.jpg" alt="Hospedagem">
+      <h3>Hospedagem</h3>
+      <p>
+        Oferecemos infraestrutura confiável e segura, garantindo alta disponibilidade e desempenho para seus sistemas.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="image/manutencao-de-site.jpg" alt="Manutenção de Sistemas">
+      <h3>Manutenção de Sistemas e Sites</h3>
+      <p>
+        Realizamos manutenção contínua, correções e melhorias para manter seus sistemas sempre atualizados e funcionando perfeitamente.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contact" class="section">
+  <h2>Contato</h2>
+  <p>Preencha o formulário abaixo e entraremos em contato com você.</p>
+
+  <form id="contactForm">
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="email" id="email" placeholder="Seu email para contato" required>
+    <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
+    <button type="submit">Enviar Mensagem</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 InovaTech Flow - Todos os direitos reservados</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

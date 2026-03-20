@@ -1,0 +1,359 @@
+/* ===================== */
+/* RESET */
+/* ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================== */
+/* BODY */
+/* ===================== */
+body {
+  font-family: Arial, sans-serif;
+  background: #020c2b;
+  color: #ffffff;
+}
+
+/* ===================== */
+/* HEADER / NAVBAR */
+/* ===================== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  background: #021a3a;
+  border-bottom: 1px solid #112240;
+}
+
+/* LOGO (corrigido) */
+.logo-img {
+  height: 60px;
+  object-fit: contain;
+  scale: calc(2.5);
+  transition: 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.7));
+}
+
+/* MENU */
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* 🔥 substitui margin */
+}
+
+/* LINKS */
+.header nav a,
+.dropbtn {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* LINHA ANIMADA */
+.header nav a::after,
+.dropbtn::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background: #00e5ff;
+  transition: 0.3s;
+}
+
+.header nav a:hover::after,
+.dropbtn:hover::after {
+  width: 100%;
+}
+
+.header nav a:hover,
+.dropbtn:hover {
+  color: #00e5ff;
+}
+
+/* ===================== */
+/* DROPDOWN */
+/* ===================== */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* MENU PRINCIPAL */
+.dropdown-content {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 260px;
+  background: #0a1f44;
+  border-radius: 10px;
+  padding: 10px 0;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ITEM */
+.menu-item {
+  position: relative;
+  padding: 12px 20px;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: #112240;
+  color: #00e5ff;
+}
+
+/* SUBMENU */
+.submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 220px;
+  background: #021a3a;
+  border-radius: 10px;
+  display: none;
+  padding: 10px 0;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background: #112240;
+  color: #00e5ff;
+}
+
+/* ===================== */
+/* CARROSSEL */
+/* ===================== */
+.carousel {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* SLIDE */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 12, 43, 0.7);
+  top: 0;
+  left: 0;
+}
+
+/* TEXTO */
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 18px;
+  color: #cbd5e1;
+}
+
+/* ===================== */
+/*  WAVE */
+/* ===================== */
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+}
+
+.wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wave path {
+  fill: rgb(128, 126, 125);
+}
+
+/* ===================== */
+/* SEÇÕES */
+/* ===================== */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: rgb(128, 126, 125);
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: rgb(0, 231, 231);
+}
+
+.section p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #000000;
+}
+
+/* ===================== */
+/* SERVIÇOS */
+/* ===================== */
+.dark {
+  background: #0f172a;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #112240;
+  padding: 25px;
+  border-radius: 12px;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #00e5ff;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 15px;
+}
+
+/* ===================== */
+/* FORMULÁRIO */
+/* ===================== */
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: #112240;
+  color: white;
+}
+
+form button {
+  padding: 12px;
+  background: #00e5ff;
+  color: #020c2b;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #00bcd4;
+}
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #021a3a;
+  color: #8892b0;
+}
+
+/* ===================== */
+/* RESPONSIVO */
+/* ===================== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dropdown-content,
+  .submenu {
+    position: static;
+  }
+
+  .carousel {
+    height: 300px;
+  }
+
+  .content h1 {
+    font-size: 26px;
+  }
+}
