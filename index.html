@@ -4,62 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>InovaTech Flow</title>
+  <link rel="shortcut icon" href="image/INOVATECHFLOW-FAVICOM.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <title>InovaTech Flow - Inovação que move negócios </title>
 </head>
 <body>
 
 <!-- HEADER -->
 <header class="header">
-  <img src="image/INOVATECHFLOW.svg" alt="InovaTech Flow" class="logo-img">
+  <img src="image/INOVATECHFLOW-AZUL-CLARA.svg" alt="InovaTech Flow" class="logo-img">
 
-  <nav>
-    <a href="#">Início</a>
-    <a href="#about">Sobre</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-    <!-- DROPDOWN -->
-    <div class="dropdown">
-      <a href="#services" class="dropbtn">Soluções e Serviços ▾</a>
-
-      <div class="dropdown-content">
-
-        <div class="menu-item">
-          Desenvolvimento
-          <div class="submenu">
-            <a href="#services">Sistemas Sob Medida</a>
-            <a href="#services">Aplicações Web</a>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          Automações
-          <div class="submenu">
-            <a href="#services">Integração de APIs</a>
-            <a href="#services">Processos Automatizados</a>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          Infraestrutura
-          <div class="submenu">
-            <a href="#services">Cloud</a>
-            <a href="#services">Hospedagem</a>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          Suporte e Manutenção
-          <div class="submenu">
-            <a href="#services">Correções</a>
-            <a href="#services">Melhorias Contínuas</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <a href="#contact">Contato</a>
+  <nav id="nav-menu">
+    <a href="#">Home</a>
+    <a href="#quem-somos">Sobre</a>
+    <a href="#service-title">Soluções e Serviços</a>
+    <a href="#contato">Contato</a>
+    <a href="https://wa.me/5511998824672?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Inova%20Tech%20Flow%2C%20vamos%20conversar%3F" id="button-solicite-nav" target="_blank">Solicitar orçamento</a>
   </nav>
 </header>
+
+<!-- OVERLAY — fora do header -->
+<div class="nav-overlay" id="nav-overlay"></div>
 
 <!-- CARROSSEL -->
 <section class="carousel">
@@ -88,7 +62,7 @@
     </div>
   </div>
 
-  <!-- 🌊 CURVA (WAVE) -->
+  <!-- CURVA (WAVE) -->
   <div class="wave">
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
       <path d="M0,40 C300,120 1100,0 1440,60 L1440,120 L0,120 Z"></path>
@@ -97,74 +71,392 @@
 
 </section>
 
-<!-- SOBRE -->
-<section class="section">
-  <h2>Sobre a Empresa</h2>
-  <p>
-    A InovaTech Flow é especializada no desenvolvimento de soluções tecnológicas sob medida. 
-    Trabalhamos lado a lado com nossos clientes para criar sistemas seguros, modernos e preparados para o crescimento sustentável.
-  </p>
-</section>
+<section class="section about-section">
 
-<!-- SERVIÇOS -->
-<section id="services" class="section dark">
-  <h2>Serviços</h2>
+    <!-- CONTEÚDO -->
+    <div class="about-content">
+      <span class="services-label" id="quem-somos">QUEM SOMOS</span>
 
-  <div class="cards">
+      <h2>Tecnologia que <span class="highlight-orange">transforma</span> negócios</h2>
 
-    <div class="card">
-      <img src="image/desenvolvimento-de-sistemas.jpg" alt="Desenvolvimento de Sistemas">
-      <h3>Desenvolvimento de Sistemas</h3>
-      <p>
-        Criamos sistemas personalizados que atendem às necessidades específicas do seu negócio, com foco em performance, segurança e usabilidade.
+      <p class="about-description">
+        A <strong>InovaTech Flow</strong> nasceu de conversas entre amigos que compartilhavam a mesma inquietação: por que a tecnologia, que deveria facilitar a vida, muitas vezes se torna um obstáculo? Com experiências complementares em desenvolvimento de software, gestão de projetos e infraestrutura em nuvem, unimos nossas competências para criar algo diferente — não apenas entregar projetos, mas ser parceiros que entendem o <em>flow</em> dos negócios.
+        <br><br>
+        Somos um time de especialistas apaixonados por resolver problemas complexos com soluções simples e elegantes. Nosso propósito é garantir que a tecnologia seja o motor — e nunca o freio — do seu crescimento.
       </p>
-    </div>
 
-    <div class="card">
-      <img src="image/Automacao-service.jpeg" alt="Automações">
-      <h3>Automações</h3>
-      <p>
-        Automatizamos processos para aumentar a produtividade, reduzir erros e tornar sua operação mais eficiente e escalável.
-      </p>
-    </div>
+      <!-- Diferenciais / Valores -->
+      <div class="about-features">
 
-    <div class="card">
-      <img src="image//hospedagem-foto.jpg" alt="Hospedagem">
-      <h3>Hospedagem</h3>
-      <p>
-        Oferecemos infraestrutura confiável e segura, garantindo alta disponibilidade e desempenho para seus sistemas.
-      </p>
-    </div>
+        <div class="about-feature">
+          <div class="feature-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#ffffff" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Transparência analítica</h4>
+            <p>Nada de achismos. Mostramos em números e dados reais o impacto das nossas soluções no seu negócio.</p>
+          </div>
+        </div>
 
-    <div class="card">
-      <img src="image/manutencao-de-site.jpg" alt="Manutenção de Sistemas">
-      <h3>Manutenção de Sistemas e Sites</h3>
-      <p>
-        Realizamos manutenção contínua, correções e melhorias para manter seus sistemas sempre atualizados e funcionando perfeitamente.
-      </p>
+        <div class="about-feature">
+          <div class="feature-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#ffffff" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Colaboração real</h4>
+            <p>Trabalhamos lado a lado com nossos clientes, mantendo a essência da nossa origem: parceiros de verdade.</p>
+          </div>
+        </div>
+
+        <div class="about-feature">
+          <div class="feature-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#ffffff" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Excelência técnica</h4>
+            <p>Utilizamos o que há de mais robusto no mercado para garantir segurança e escalabilidade em cada entrega.</p>
+          </div>
+        </div>
+
+        <div class="about-feature">
+          <div class="feature-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#ffffff" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Agilidade com estrutura</h4>
+            <p>Fluxos de trabalho organizados para entregas rápidas, sem abrir mão da qualidade técnica.</p>
+          </div>
+        </div>
+
+      </div><!-- fim about-features -->
+
+      <a href="#contact" class="btn-about">Fale com nosso time</a>
     </div>
 
   </div>
 </section>
 
-<!-- CONTATO -->
-<section id="contact" class="section">
-  <h2>Contato</h2>
-  <p>Preencha o formulário abaixo e entraremos em contato com você.</p>
+<!-- SERVIÇOS -->
+<section class="section dark">
+  <div class="services-header">
+    <span class="services-label" id="solucoes-servicoes">Quais serviços te Oferecemos</span>
+    <h2 id="service-title">Como podemos te ajudar a elevar seu negocio a outro nivel</h2>
+  </div>
 
-  <form id="contactForm">
-    <input type="text" id="nome" placeholder="Seu nome" required>
-    <input type="email" id="email" placeholder="Seu email para contato" required>
-    <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
-    <button type="submit">Enviar Mensagem</button>
-  </form>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#0f172a" stroke-width="1.8">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M8 21h8M12 17v4"/>
+        </svg>
+      </div>
+      <h3>Desenvolvimento de Sistemas</h3>
+      <p class="">Criamos sistemas personalizados que atendem às necessidades específicas do seu negócio, com foco em performance, segurança e usabilidade.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#0f172a" stroke-width="1.8">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+        </svg>
+      </div>
+      <h3>Automações</h3>
+      <p>Automatizamos processos para aumentar a produtividade, reduzir erros e tornar sua operação mais eficiente e escalável.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#0f172a" stroke-width="1.8">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M2 7h20"/>
+          <circle cx="5" cy="5" r="0.5" fill="#0f172a"/>
+          <circle cx="8" cy="5" r="0.5" fill="#0f172a"/>
+        </svg>
+      </div>
+      <h3>Hospedagem</h3>
+      <p>Oferecemos infraestrutura confiável e segura, garantindo alta disponibilidade e desempenho para seus sistemas.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#0f172a" stroke-width="1.8">
+          <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        </svg>
+      </div>
+      <h3>Manutenção de Sistemas e Sites</h3>
+      <p>Realizamos manutenção contínua, correções e melhorias para manter seus sistemas sempre atualizados e funcionando perfeitamente.</p>
+    </div>
+
+     <div class="card">
+      <div class="card-icon">
+        <!-- Suporte -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <!-- cabeça -->
+      <circle cx="12" cy="8" r="4"/>
+      <!-- corpo / ombros -->
+      <path d="M4 20a8 8 0 0 1 16 0"/>
+      <!-- headset arco -->
+      <path d="M4 12a8 8 0 0 1 16 0"/>
+  <!-- microfone -->
+  <line x1="16" y1="16" x2="18" y2="16"/>
+</svg>
+      </div>
+      <h3>Suporte 24X7</h3>
+      <p>Suporte 24x7 disponível para atender você a qualquer momento, com rapidez, eficiência e confiança, garantindo a melhor experiência sempre que precisar.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+       <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- lâmpada / ideia -->
+  <path d="M12 2a6 6 0 0 0-4.5 10.3c.4.4.7 1 0.7 1.7v2h8v-2c0-.7.3-1.3.7-1.7A6 6 0 0 0 12 2z"/>
+  <!-- base da lâmpada -->
+  <path d="M10 18h4"/>
+  <path d="M10 20h4"/>
+  <!-- detalhe insight -->
+  <path d="M9 12l2 2 4-4"/>
+</svg>
+          <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        </svg>
+      </div>
+      <h3>Consultoria em Tecnologia</h3>
+      <p>Oferecemos consultoria de TI especializada, ajudando sua empresa a otimizar processos, reduzir custos e implementar soluções tecnológicas eficientes para impulsionar seus resultados com segurança e inovação.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Hospegagens -->
+
+   <section class="planos-section">
+ 
+    <div class="planos-header">
+      <span class="planos-label">Planos e Preços</span>
+      <h2 class="planos-title">Hospedagem</h2>
+      <p class="planos-subtitle">Cancele quando quiser, <span>25% off</span> no pagamento anual!</p>
+    </div>
+ 
+    <div class="planos-toggle">
+      <div class="toggle-wrap">
+        <button class="toggle-btn active" id="btn-mensal" onclick="setMode('mensal')">Mensal</button>
+        <button class="toggle-btn" id="btn-anual" onclick="setMode('anual')">Anual</button>
+      </div>
+      <br>
+    </div>
+ 
+   <!-- Cards Planos -->
+<div class="planos-grid swiper planos-swiper">
+  <div class="swiper-wrapper">
+
+    <!-- Starter -->
+    <div class="plano-card starter swiper-slide">
+      <div class="card-header">
+        <span class="card-name">Starter</span>
+      </div>
+      <div class="card-inner">
+        <div class="card-price"
+             data-mensal="R$ 65,00/mês"
+             data-anual="R$ 588,00/ano">R$ 65,00/mês</div>
+        <div class="card-price-note"
+             data-mensal=""
+             data-anual="Equivale a R$ 49,00/mês"></div>
+        <p class="card-desc">Ideal para profissionais liberais e pequenos negócios que buscam credibilidade digital.</p>
+        <p class="card-included">Incluso:</p>
+        <ul class="card-features">
+          <li><strong>1</strong> domínio hospedado</li>
+          <li><strong>3</strong> contas de e-mail profissionais</li>
+          <li><strong>15GB</strong> de armazenamento</li>
+          <li>Suporte via WhatsApp / Telefone</li>
+          <li>Certificado SSL Grátis</li>
+          <li>Painel cPanel</li>
+          <li>Backup Semanal Automático</li>
+        </ul>
+        <button class="card-btn">Contratar</button>
+      </div>
+    </div>
+
+    <!-- Professional -->
+    <div class="plano-card professional featured swiper-slide">
+      <div class="card-header">
+        <span class="card-badge">Mais popular</span>
+        <span class="card-name">Professional</span>
+      </div>
+      <div class="card-inner">
+        <div class="card-price"
+             data-mensal="R$ 100,00/mês"
+             data-anual="R$ 948,00/ano">R$ 100,00/mês</div>
+        <div class="card-price-note"
+             data-mensal=""
+             data-anual="Equivale a R$ 79,00/mês"></div>
+        <p class="card-desc">O equilíbrio perfeito para empresas em crescimento que precisam de mais espaço e estratégia.</p>
+        <p class="card-included">Incluso:</p>
+        <ul class="card-features">
+          <li><strong>2</strong> domínios hospedados</li>
+          <li><strong>10</strong> contas de e-mail profissionais</li>
+          <li><strong>30GB</strong> de armazenamento</li>
+          <li>Suporte prioritário via mensagem</li>
+          <li>Reunião trimestral de análise de desempenho</li>
+          <li>Tudo do plano Starter</li>
+          <li>Monitoramento de Uptime 24/7</li>
+          <li>Otimização de performance básica</li>
+        </ul>
+        <button class="card-btn">Contratar</button>
+      </div>
+    </div>
+
+    <!-- Business -->
+    <div class="plano-card business swiper-slide">
+      <div class="card-header">
+        <span class="card-name">Business</span>
+      </div>
+      <div class="card-inner">
+        <div class="card-price"
+             data-mensal="R$ 140,00/mês"
+             data-anual="R$ 1.440,00/ano">R$ 140,00/mês</div>
+        <div class="card-price-note"
+             data-mensal=""
+             data-anual="Equivale a R$ 120,00/mês"></div>
+        <p class="card-desc">A solução completa para empresas que demandam alta capacidade e consultoria de automação.</p>
+        <p class="card-included">Incluso:</p>
+        <ul class="card-features">
+          <li><strong>10</strong> domínios hospedados</li>
+          <li><strong>100</strong> contas de e-mail profissionais</li>
+          <li><strong>60GB</strong> de armazenamento</li>
+          <li>Suporte VIP — resposta ultra rápida</li>
+          <li>Consultoria mensal personalizada</li>
+          <li>Migração gratuita de provedor</li>
+          <li>Tudo dos planos anteriores</li>
+          <li>Relatório mensal de atualizações</li>
+          <li>Prioridade em novas implementações</li>
+        </ul>
+        <button class="card-btn">Contratar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+ 
+  </section>
+<!-- CONTATO -->
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    
+    <div class="contact-form">
+      <span class="tag" id="contato">Fale conosco</span>
+      <h2>Como podemos te ajudar?</h2>
+      <p>Preencha o formulário e responderemos o mais rápido possível.</p>
+
+      <form id="contactForm">
+        <div class="input-group">
+          <input type="text" id="nome" placeholder="Seu nome" required>
+          <input type="email" id="email" placeholder="Seu email" required>
+        </div>
+
+        <input type="text" id="assunto" placeholder="Assunto">
+
+        <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
+
+        <button type="submit">Enviar mensagem</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h3>Contato</h3>
+
+      <div class="info-item">
+       <i class="fa-solid fa-location-dot"></i>
+        <p>Cidade: São Paulo</p>
+      </div>
+
+      <div class="info-item">
+         <i class="fa-solid fa-envelope"></i>
+        <p>inovatechflow@email.com</p>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-solid fa-phone"></i>
+        <p>(00) 00000-0000</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <p>© 2026 InovaTech Flow - Todos os direitos reservados</p>
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Marca -->
+    <div class="footer-brand">
+      <h2>Inova Tech Flow</h2>
+      <p>
+        Soluções de TI e desenvolvimento sob medida para impulsionar
+        empresas com tecnologia de alto nível.
+      </p>
+
+      <div class="socials">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Serviços -->
+    <div class="footer-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li>Desenvolvimento de Software</li>
+        <li>Consultoria em TI</li>
+        <li>Análise de Dados</li>
+        <li>Suporte 24 horas</li>
+        <li>Manutenção de sistema</li>
+      </ul>
+    </div>
+
+    <!-- Projetos -->
+    <div class="footer-col">
+      <h4>Projetos</h4>
+      <ul>
+        <li>Adota Pet</li>
+        <li>WhatsBOT</li>
+        <li>Tatto Appointment</li>
+      </ul>
+    </div>
+
+    <!-- Contato -->
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li>Email: inovatechflow@gmail.com</li>
+        <li>WhatsApp: (00) 00000-0000</li>
+        <li>Brasil</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 InovaTechFlow. Todos os direitos reservados.</p>
+  </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
