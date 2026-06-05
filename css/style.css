@@ -1494,6 +1494,10 @@ button:hover {
   transform: translateX(4px);
 }
 
+.ancor-project{
+  color: var(--orange)
+}
+
 /* Bottom */
 .footer-bottom {
   text-align: center;
